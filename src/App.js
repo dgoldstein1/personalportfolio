@@ -56,7 +56,7 @@ class App extends Component {
       .get(resumeData.config.geoIpServer)
       .then((r) => {
         return axios
-          .post(resumeData.config.metricsServer + "/visits", r)
+          .post(resumeData.config.metricsServer + "/visits", r.data)
           .then((mr) => {
             this.setState({ visitInfo: mr.data });
           })

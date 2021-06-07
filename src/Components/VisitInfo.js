@@ -12,7 +12,7 @@ class VisitInfo extends Component {
           nVisitorsDisplayed: this.state.nVisitorsDisplayed + 1,
         });
       }
-    }, 100);
+    }, 15);
   }
 
   componentWillUnmount() {

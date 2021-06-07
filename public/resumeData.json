@@ -1,6 +1,6 @@
 {
   "config" : {
-    "geoIpServer" : "/api/geoIpServer/check?access_key=7eca814a6de384aab338e110c57fef37",
+    "geoIpServer" : "/myip",
     "metricsServer" :"/api/metrics"
   },
   "main": {
