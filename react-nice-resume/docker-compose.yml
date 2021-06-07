@@ -1,0 +1,46 @@
+version: "2"
+services:
+
+  edge:
+    image: dgoldstein1/reverse-proxy:0.1.4
+    ports:
+      - 8443:8443
+    environment:
+      - PORT=8443
+      - services=ui,backend,geoip
+      - ui_incoming_path=/
+      - ui_outgoing_url=http://ui:3000
+      - backend_incoming_path=/api/metrics/
+      - backend_outgoing_url=http://server:5000
+      - geoip_incoming_path=/api/geoIpServer/
+      - geoip_outgoing_url=http://api.ipstack.com
+
+  ui:
+    image : dgoldstein1/personal-website
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/usr/src/app'
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=development
+
+  server:
+    image : dgoldstein1/websiteanalytics-backend
+    environment:
+      - LOGGER=true
+      - TEST_MODE=false
+      - DATABASE_URL=mongodb://mongodb:27017
+      - DB_NAME=visits
+      - PORT=5000
+    links:
+      - mongodb
+    depends_on:
+      - mongodb
+    ports:
+      - 5002:5000
+
+  mongodb:
+    image: 'mongo:4.0.5'

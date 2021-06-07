@@ -1,0 +1,157 @@
+{
+  "config" : {
+    "geoIpServer" : "/api/geoIpServer/check?access_key=7eca814a6de384aab338e110c57fef37",
+    "metricsServer" :"/api/metrics"
+  },
+  "main": {
+    "name":"David Goldstein",
+    "description":"full stack engineer, father, kind human",
+    "image":"profilepic.jpg",
+    "bio":"I love working with smart, passionate, and kind people! Originally specializing in Arabic language and International Studies, I fell in love with the power of programming while working in the Intelligence Community. I am continually looking for the next challenge to take on and ways to think outside the box!",
+    "contactmessage":"Here is where you should write your message to readers to have them get in contact with you.",
+    "email": "dgoldstein01@gmail.com",
+    "phone": "617-543-0274",
+    "github":"https://github.com/nordicgiant2/react-nice-resume",
+    "project":"https://github.com/nordicgiant2/react-nice-resume",
+    "address":{
+      "street":"",
+      "city":"St. Paul",
+      "state":"Minnesota",
+      "zip": "Minnesota"
+    },
+    "website": "http://www.timbakerdev.com",
+    "resumedownload": "https://github.com/dgoldstein1/resume/raw/master/david_goldstein.pdf",
+    "social":[
+      {
+        "name":"LinkedIn",
+        "url":"https://linkedin.com/in/david-goldstein-1211388a/",
+        "className":"fa fa-linkedin"
+      },
+      {
+        "name":"Github",
+        "url":"https://github.com/dgoldstein1",
+        "className":"fa fa-github"
+      } ]
+  },
+  "resume":{
+    "education":[
+      {
+        "school":"Macalester College",
+        "degree":"Bachelor of Arts",
+        "graduated":"Sprint 2016",
+        "description":"Majors in Computer Science, International Studies, and Arabic Language"
+      },
+      {
+        "school":"American University of Sharjah, UAE",
+        "degree":"Study Abroad",
+        "graduated":"Fall 2015",
+        "description":"Study abroad program in Computer Science, Arabic, and Middle Eastern Politics"
+      },
+      {
+        "school":"Al Akhawayn University, Morocco",
+        "degree":"Study Abroad",
+        "graduated":"Summer 2013",
+        "description":"Study abroad program for Arabic language"
+      }
+
+    ],
+    "work":[
+      {
+        "company":"Greymatter.io",
+        "title":"Senior Software Engineer",
+        "years":"May 2017 - Present",
+        "description":"Core developer on cutting-edge service mesh platform, assist leading sprint planning and review cycles, extensive front-end work on service-mesh dashboard."
+      },
+      {
+        "company":"Defense Intelligence Agency",
+        "title":"Software Engineer",
+        "years":"September 2016 - May 2017",
+        "description":"Developer on platform service for Intelligence Analysts giving presentations, conduct research with faculty at the National Intelligence University on immigration of Arabic-speaking populations."
+      },
+      {
+        "company":"United States Department of State",
+        "title":"Intern",
+        "years":"Summer 2015",
+        "description":"Report on migrations throughout the Middle East for the creation of US foreign policy, oversee disbursement of US funding to NGOs in the Middle East."
+      }
+    ],
+    "skills":[
+      {
+        "name":"Certified Scrum Master",
+        "level":"100%"
+      },
+      {
+        "name":"Go",
+        "level":"100%"
+      },
+      {
+        "name": "ReactJs",
+        "level" : "100%"
+      },
+      {
+        "name": "Javascript",
+        "level" : "100%"
+      },
+      {
+        "name":"Bash",
+        "level":"95%"
+      },
+      {
+        "name":"Python",
+        "level":"95%"
+      },
+      {
+        "name":"CSS",
+        "level":"90%"
+      },
+      {
+        "name":"JAVA",
+        "level":"80%"
+      },
+      {
+        "name":"C/C++",
+        "level":"80%"
+      },
+     {
+        "name":"R",
+        "level":"75%"
+      },
+       {
+        "name":"Skylark",
+        "level":"60%"
+      },
+       {
+        "name":"ASM",
+        "level":"60%"
+      }
+    ]
+  },
+  "portfolio":{
+    "projects": [
+      {
+        "title":"Link Language Connections",
+        "category":"Connecting words through the internet, wikipedia, and books",
+        "image":"links.png",
+        "url":"https://www.linklanguageconnections.com/"
+      },
+      {
+        "title":"Housing Hub",
+        "category":"Website connecting people without housing to local housing organizations and housing vouchers as part of Code for Charlottesville, VA",
+        "image":"housing-hub.png",
+        "url":"https://www.codeforcville.org/housing-navigator"
+      },
+      {
+        "title":"Crawler",
+        "category":"Performant website crawler for data mining",
+        "image":"crawler.png",
+        "url":"https://github.com/dgoldstein1/crawler"
+      },
+      {
+        "title":"Website Visit Tracker",
+        "category":"Geo-IP tracker powering analytics for this site",
+        "image":"visits.png",
+        "url":"https://determined-tesla-321f59.netlify.app/"
+      }
+    ]
+  }
+}
