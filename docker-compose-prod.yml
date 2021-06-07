@@ -1,0 +1,34 @@
+version: "2"
+services:
+
+  edge:
+    image: docker.io/dgoldstein1/personal-website:0.1.0
+    ports:
+      - 8443:8443
+    environment:
+      - PORT=8443
+      - services=ui,backend,geoip
+      - ui_incoming_path=/
+      - ui_outgoing_url=file:///static-files
+      - backend_incoming_path=/api/metrics/
+      - backend_outgoing_url=http://server:5000
+      - geoip_incoming_path=/api/geoIpServer/
+      - geoip_outgoing_url=http://api.ipstack.com
+
+  server:
+    image : dgoldstein1/websiteanalytics-backend
+    environment:
+      - LOGGER=true
+      - TEST_MODE=false
+      - DATABASE_URL=mongodb://mongodb:27017
+      - DB_NAME=visits
+      - PORT=5000
+    links:
+      - mongodb
+    depends_on:
+      - mongodb
+    ports:
+      - 5002:5000
+
+  mongodb:
+    image: 'mongo:4.0.5'

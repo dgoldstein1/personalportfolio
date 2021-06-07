@@ -1,0 +1,17 @@
+# base image
+# FROM dgoldstein1/personal-website-dev AS builder
+
+# Copy everything into a commonn container
+FROM dgoldstein1/reverse-proxy:0.1.5 AS reverseproxy
+
+# configure builder
+COPY build /static-files/
+COPY public /static-files/public
+
+# execution
+ADD VERSION /static-files/VERSION
+ADD LICENSE /static-files/LICENSE
+
+ENV services="internalmetrics"
+ENV internalmetrics_incoming_path="/prometheusmetrics"
+ENV services ui,backend,geoip
