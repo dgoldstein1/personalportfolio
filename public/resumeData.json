@@ -151,6 +151,12 @@
         "category":"Geo-IP tracker powering analytics for this site",
         "image":"visits.png",
         "url":"https://determined-tesla-321f59.netlify.app/"
+      },
+      {
+        "title":"Reverse Proxy",
+        "category":"Light weight reverse proxy powering this website",
+        "image":"reverse-proxy.png",
+        "url":"https://github.com/dgoldstein1/reverse-proxy"
       }
     ]
   }
